@@ -1,0 +1,49 @@
+name: baidu_asr_demo
+description: "A Flutter app with Porcupine wake word + background audio"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_foreground_task: ^6.1.2
+  record: ^4.4.4  # 录音插件
+  path_provider: ^2.0.14
+  share_plus: ^7.2.1
+  ffmpeg_kit_flutter_full_gpl: ^6.0.3-LTS
+
+  # ✅ 唤醒词相关依赖
+  porcupine_flutter: ^3.0.5
+  flutter_voice_processor: ^1.1.2
+
+  # ✅ 后台音频支持（用于播放静音保持活跃）
+  audio_session: ^0.1.6
+  just_audio: ^0.9.33
+
+  # ✅ 权限处理（麦克风等）
+  permission_handler: ^11.0.1
+
+  # ✅ 网络请求与音频播放支持
+  http: ^0.13.6
+  audioplayers: ^5.2.1
+
+  # ✅ TTS 语音合成
+  flutter_tts: ^3.6.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0   # ✅ 更新为兼容 Dart 3 的最新版本
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # ✅ 唤醒词模型文件
+    - assets/hey-mango_en_android_v3_0_0.ppn
+    - assets/porcupine_params.pv
+    - assets/silence.mp3

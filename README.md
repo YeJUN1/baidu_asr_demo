@@ -1,4 +1,4 @@
-# android_voice
+# android_voice 或者按照目前阶段来说，baidu_asr_demo
 
 A new Flutter project.
 
